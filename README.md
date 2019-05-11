@@ -29,8 +29,20 @@ Set-up Python Environment *** REQUIRES ADMIN PRIVILEGES
 ## Challenge One - Some Basics
 ### Code Structure
 1. Files
-  - Create a folder for you application
-  - Create your main application file with a .py extension, name it HelloPython.py
-  - Add a simple statement to your file: `print("Hello Python")`
-  - From the terminal window, enter this command *python HelloPython.py*
-1. Functions
+   - Create a folder for you application
+   - Create your main application file with a .py extension, name it HelloPython.py
+   - Add a simple statement to your file: `print("Hello Python")`
+   - Save the file!
+   - From the terminal window, enter this command *python HelloPython.py*
+2. Functions
+   
+   To better organize code, we will introduce simple functions (no paramaters). This will make the code more readable and easier to manipulate.
+   
+   - Define a function
+  
+     ```python
+     def MyFuncName():
+         first line of code
+    ```
+
+   - Call a function
