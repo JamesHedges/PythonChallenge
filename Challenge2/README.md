@@ -1,51 +1,8 @@
-# WorldRemit Denver Python Challenge One - Some Basics
-## Variables and Types
-1. Primitives
-   - booleans
-   - integers
-   - floats
-   - strings
-     - Creating - use quote or double quote (must match)
-2. Variables
-   - What is a variable in Python? *Everything!*
-   - Creating and Assigning - simple
-     - Naming
-       - Lower and uppe rcase letters
-       - Digits (0-9)
-       - Underscore
-       - Cannot start with a digit
-       - Starting with underscore - can do this, but Python uses them as 'special' variable. So be careful. More on this in a later challenge
-     - They are case sensitive!
-     - Assignment - = is not equality
-   - Assigning other variables - what works, how it works
-   - What type am I? `type(<varName>)`
-3. More Strings
-   - Its a collection of charactes that can be indexed
-     - Get the length: `len(myString)`
-     - Indexing: `print(myString[2])` (note: indexes are zero-based)
-   - Things you can do
-     - Get lower case: `myString.lower()`
-     - Get upper case: `myString.upper()`
-     - Replace a character: `myString.replace("t", "T")`
-     - Replace a substring: `myString.replace("tt", "dd")`
-     - More to come later
-   - Immutable... what's that?
-## Printing
-1. Basic print
-   - Print a literal string: `print("Hello Python")`
-   - Print a variable: `print(myVar)`
-   - Mixing it up: `print("myVar is", myVar)`
- ## Integer Operator - Arithmetic
- 1. Operators
-    - Add (+)
-    - Subract (-) 
-    - Multiply (*)
-    - Divide (/) - floating point
-    - Divide (//) - integer truncating
-    - Modulus (%)
-    - Exponentiation (**)
-2. Precedence
-## Code Structure - Moving beyond the command prompt
+# PythonChallenge
+WorldRemit Denver Python Challenge
+
+## Challenge Two - Moving Beyond Basics
+### Code Structure
 1. Files
    - Create a folder for you application, name it HelloPython
    - Create your main application file with a .py extension, name it Hello.py
@@ -117,3 +74,4 @@
         def Main():
             Message()
         ```
+## Variables and Types
