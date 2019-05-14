@@ -50,6 +50,7 @@
    - Create a folder for you application, name it HelloPython
    - Create your main application file with a .py extension, name it Hello.py
    - Add a simple statement to your file: `print("Hello Python")`
+   - FYI - in Python lingo, you have just created a module.
    - Save the file!
    - From the terminal window, enter this command *python Hello.py*
 2. Functions
@@ -117,3 +118,45 @@
         def Main():
             Message()
         ```
+## For you to do
+1. From the Python command line, try the following
+   - Create variables and assing values different types (bool, int, float, and string)
+   - Print each of the variable using the differnt print styles
+      * `print(myVal)`
+      * `print("My vale is", myVal)`
+   - Try assiging different variables to each other. What is the type (type(myVar)) of the variable being assigned?
+   - Play with the string 
+      * Print the length of the string variable
+      * Print the string's first, last, and middle characters
+   - Try some string functions
+      * Call the lower, upper, and replace methods on the string variable.
+      * Print the string variable after each call. Did the string variable change?
+   - Try some math operations
+      * Play with the order of operations
+      * Use parenthesis to control the order of operations
+2. Files and Imports (Modules)
+   - Create a folder. Open the folder in VS Code
+   - Add a python file with the .py extension. This is your main file
+      * Add a simple print statement
+      * Save the file and run it
+   - Add a function to your main file
+      * Add a simple print statement to your function
+      * Add a statement to call the function
+      * Save and run it
+   - Add another python file (module) to your folder
+      * Add a function to the module with a simple print statement
+      * Save the file
+   - In your main file, add an import for your new module
+      * In your main file's function, call the method from your module
+      * Save and run it
+3. Play, Play, Play
+   - Use your new Python skills and play around
+   - Try using the different variable types like you did on the command line
+   - Try playing around with strings
+   - Add more functions to your module, create additional modules with multiple functions
+      * Use the differnt import techniques to access your modules' methods:
+         * `import MyModule`
+         * `import MyModule as mm`
+         * `from MyModule import MyFunc`
+   
+      
