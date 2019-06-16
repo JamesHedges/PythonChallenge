@@ -4,6 +4,11 @@ WorldRemit Denver Python Challenge
 ## Challenge Two - Moving Beyond Basics
 ### More Data Types
 1. Declaring Explicitly
+    * Everything is an object
+    * Any type can be declared explicityly, without an assignment
+        * int: `myInt = int()`
+        * float: `myFloat = float()`
+        * string: `myString = str()`
 1. Collections
     * List
         * Represent a list of objects
@@ -59,8 +64,8 @@ WorldRemit Denver Python Challenge
     * Set
         * Unordered set of unique objects
         * Can perform set operations like intersection, union, and difference
-        * Create with () or set()
-            * `mySet = ("one", "two", "three")`
+        * Create with {} or set()
+            * `mySet = {"one", "two", "three"}`
             * `mySet = set()`
         * Can add and remove members
         * Example:
@@ -298,3 +303,220 @@ WorldRemit Denver Python Challenge
         MyFunc("test name")
         ```
 1. See more on functions: https://www.w3schools.com/python/python_functions.asp
+### Classes
+1. Creating a class
+    * Use the class keyword `class MyClass():` 
+        - don't forget the colon!
+    * Inherit another class by adding to parameters: `class MyClass(myBase):`
+    * Example:
+        ```python
+        class MyClass():
+            pass
+
+        myCls = MyClass()
+        ```
+        - pass indicates there is no implementation
+1. Constructor
+    * Add a constructor with __init__ method
+    * Include the self parameter
+    * Add additional parameters - not required
+    * Fields can be added and initialized
+    * Example:
+    ```python
+    class Person():
+        
+        def __init__(self, fname, lname):
+            self.fname = fname
+            self.lname = lname
+    ```
+1. Methods
+    * First parameter will be self
+    * Example:
+    ```python
+    class Person():
+    
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+
+    def FullName(self):
+        return self.fname + " " + self.lname
+
+    def SaySomething(self):
+        return "We need to talk"
+    ```
+
+1. Properties
+    * Use the @property decorator for the get
+    * Use the @<property name>.setter decorator for the set (not required)
+    * Field names can be 'mangled' to make the less accessable by starting with '__'
+    * Example:
+    ```python
+    class Person():
+    
+    def __init__(self, fname, lname):
+        self.__fname = fname
+        self.__lname = lname
+
+    @property
+    def FirstName(self):
+        return self.__fname
+
+    @FirstName.setter
+    def FirstName(self, fname):
+        self.__fname = fname
+
+    @property
+    def FullName(self):
+        return self.__fname + " " + self.__lname
+
+    def SaySomething(self):
+        return "We need to talk"
+    ```
+1. Inheritance
+    * Inherit from a base class in declaration by adding to params: `class MyDerived(MyBase):`
+    * Access the base class through super()
+    * No constructor needs to be added, the base will be called
+    * Example:
+        ```python
+            class DoctorPerson(Person):
+
+                def SpecialName():
+                    return "Dr. " + super().FirstName
+        ```
+1. Polymorphism
+    * Polymorphism is achieve by overriding in derived class
+    * Example:
+        ```python
+            class DoctorPerson(Person):
+
+                def SaySomething(self):
+                    return "The doctor says..."
+        ```
+1. Special Methods
+    * Overloads language operators
+    * Surrounded with double underscore
+    * Most common and recommended is the to string method: `__str__(self)`
+    * Special Methods for comparison
+
+        <table>
+            <tr>
+                <td>__eq__(self, other)</td>
+                <td>Equality</td>
+                <td>self == other</td>
+            </tr>
+            <tr>
+                <td>__ne__(self, other)</td>
+                <td>Not Equal</td>
+                <td>self != other</td>
+            </tr>
+            <tr>
+                <td>__lt__(self, other)</td>
+                <td>Less Than</td>
+                <td>self < other</td>
+            </tr>
+            <tr>
+                <td>__gt__(self, other)</td>
+                <td>Greater Than</td>
+                <td>self > other</td>
+            </tr>
+            <tr>
+                <td>__le__(self, other)</td>
+                <td>Less Than or Equal</td>
+                <td>self <= other</td>
+            </tr>
+            <tr>
+                <td>__ge__(self, other)</td>
+                <td>Greater Than or Equal</td>
+                <td>self >= other</td>
+            </tr>
+        </table>
+
+        - Example:
+            ```python
+            class MyClass():
+                def __init__(self):
+                    self.Text1
+
+                def __eq__(self, other)
+                    return self.Text1 == other
+            ```
+    * Special Method for Math
+
+        <table>
+            <tr>
+                <td>__add__(self, other)</td>
+                <td>Add</td>
+                <td>self + other</td>
+            </tr>
+            <tr>
+                <td>__sub__(self, other)</td>
+                <td>Subtract</td>
+                <td>self - other</td>
+            </tr>
+            <tr>
+                <td>__mul__(self, other)</td>
+                <td>Multiply</td>
+                <td>self * other</td>
+            </tr>
+            <tr>
+                <td>__floordiv__(self, other)</td>
+                <td>Floor Division</td>
+                <td>self // other</td>
+            </tr>
+            <tr>
+                <td>__truediv__(self, other)</td>
+                <td>Division</td>
+                <td>self / other</td>
+            </tr>
+            <tr>
+                <td>__mod__(self, other)</td>
+                <td>Modulus</td>
+                <td>self % other</td>
+            </tr>
+            <tr>
+                <td>__pow__(self, other)</td>
+                <td>Power</td>
+                <td>self ** other</td>
+            </tr>
+        </table>
+
+        - Example (using add to concatination):
+            ```python
+            class MyClass():
+                def __init__(self):
+                    self.Text1
+
+                def __add__(self, other):
+                    return self.Text1 + " " + other
+            ```
+    * Other Common Special Methods
+
+        <table>
+            <tr>
+                <td>__str__(self)</td>
+                <td>To String</td>
+                <td>str(self)</td>
+            </tr>
+            <tr>
+                <td>__repr__(self)</td>
+                <td>Echo Variable</td>
+                <td>repr(self)</td>
+            </tr>
+            <tr>
+                <td>__len__(self)</td>
+                <td>Length</td>
+                <td>len(self)</td>
+            </tr>
+        </table>
+
+        - Example:
+            ```python
+            class MyClass():
+                def __init__(self):
+                    self.Text1
+
+                def __str__(self):
+                    return self.Text1
+            ```
+        
