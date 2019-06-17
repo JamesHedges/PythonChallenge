@@ -4,43 +4,46 @@ import UsingCollections as uc
 import OtherTypes as ot
 import UsingFunctions as uf
 from UsingClasses import Stack, Person, DoctorPerson
+import CollectionsChallenge as cc
+import OtherTypesChallenge as otc
 
 
 def main():
-    Hello()
-    uv.DeclaringVariables()
-    uv.Comparisons()
-    ot.TryDateTime()
-    ot.TryArray()
-    ot.TryEnum()
+      cc.CreateListsAndShowThem()
+      cc.CreateTupleAndShowIt()
+      cc.CreateSetAndShow()
+      cc.EnglishSpanishNumerTranslations()
+      cc.FavoriteFruits()
+      otc.ShowSomeDates()
 
-    uf.TryIf()
-    uf.MyFuncWithParams("SHOWIT", True)
-    uf.MyFuncWithParams("showit")
-    result = uf.MyFuncWithParamsAndReturn("showit", True)
-    print(f"result = {result}")
+#     uv.DeclaringVariables()
+#     uv.Comparisons()
+#     ot.TryDateTime()
+#     ot.TryArray()
+#     ot.TryEnum()
 
-    myStack = Stack()
-    myStack.push(4)
-    myStack.push(5)
-    print(f"myStack: {myStack}")
-    print(f"peek myStack: {myStack.peek()}")
-    print(f"pop myStack: {myStack.pop()}")
-    myStack.items = [10, 9, 8]
-    print(f"myStack: {myStack}")
-    print(f"peek myStack: {myStack.peek()}")
-    print(f"pop myStack: {myStack.pop()}")
+#     uf.TryIf()
+#     uf.MyFuncWithParams("SHOWIT", True)
+#     uf.MyFuncWithParams("showit")
+#     result = uf.MyFuncWithParamsAndReturn("showit", True)
+#     print(f"result = {result}")
 
-    print("\nAttempting polymorphism")
-    person = Person("John", "Doe")
-    doctor = DoctorPerson("Jane", "Doe")
-    print (f"Person: {person.FullName} says '{person.SaySomething()}'")
-    print (f"Doctor: {doctor.FullName} says '{doctor.SaySomething()}'")
-    
+#     myStack = Stack()
+#     myStack.push(4)
+#     myStack.push(5)
+#     print(f"myStack: {myStack}")
+#     print(f"peek myStack: {myStack.peek()}")
+#     print(f"pop myStack: {myStack.pop()}")
+#     myStack.items = [10, 9, 8]
+#     print(f"myStack: {myStack}")
+#     print(f"peek myStack: {myStack.peek()}")
+#     print(f"pop myStack: {myStack.pop()}")
 
-def Hello():
-    print("\nHello Python!")
-
+#     print("\nAttempting polymorphism")
+#     person = Person("John", "Doe")
+#     doctor = DoctorPerson("Jane", "Doe")
+#     print (f"Person: {person.FullName} says '{person.SaySomething()}'")
+#     print (f"Doctor: {doctor.FullName} says '{doctor.SaySomething()}'")
 
 # End of main
 

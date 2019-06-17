@@ -163,7 +163,7 @@ WorldRemit Denver Python Challenge
             ```
     * Enum
         * Must import enum module
-        * A set of symolic names
+        * A set of symbolic names
         * Example:
             ```python
             from enum import Enum
@@ -180,7 +180,7 @@ WorldRemit Denver Python Challenge
                 if (x is Color.Red):
                     print(f"x has color red: {repr(x)}")
             ```
-### Iterating
+## Iterating
 1. Can iterate over a collection that implements __itr__
 1. Use for each loop `for x in myCollection:`
 1. Example:
@@ -193,7 +193,7 @@ WorldRemit Denver Python Challenge
             print(f"{element} ", end='')
         print("]")
     ```
-### Truth Value Testing
+## Truth Value Testing
 1. Comparison Operators
     * Equal: ==
     * Not Equal: !=
@@ -207,7 +207,7 @@ WorldRemit Denver Python Challenge
     * And - x and y
     * Or - x or y
     * Not - not x
-### Flow Control Statements
+## Flow Control Statements
 1. If Statement
     * Conditional execution when true
     * Syntax: if \<condition\>:
@@ -267,7 +267,7 @@ WorldRemit Denver Python Challenge
         except IndexError as ex:
             print (ex)
         ```
-### More Functions
+## More Functions
 1. Parameters
     * Parameters are inputs to the function
     * Can have zero or more inputs
@@ -303,7 +303,7 @@ WorldRemit Denver Python Challenge
         MyFunc("test name")
         ```
 1. See more on functions: https://www.w3schools.com/python/python_functions.asp
-### Classes
+## Classes
 1. Creating a class
     * Use the class keyword `class MyClass():` 
         - don't forget the colon!
@@ -519,4 +519,29 @@ WorldRemit Denver Python Challenge
                 def __str__(self):
                     return self.Text1
             ```
-        
+## For You To Do
+1. Lists
+    * Create an empty list of strings and fill it with 10 strings
+    * Create a list of integers using the initialization synta []
+    * Create a list using a range of even integers from 50 to 100
+    * Create a function that will print the list with each element on a separate line
+1. Tuples
+    * Create a tuple with a string, an integer, and a float
+    * Create a function that will show them
+1. Sets
+    * Create a set of numbers from 1 to 10
+    * Create a set of odd numbers from 5 to 16
+    * Get and show the union of the sets
+    * Get and show the intersection of the sets
+    * Get and show the numbers in set 2 not in set 1
+    * Create a frozen set of fruit names
+    * Create a set of your favorite fruit
+    * Are all of you favorites in the forzen set of fruit names?
+1. Dictionary 
+    * Create a dictionary to translate english number one to ten to another language
+    * Lookup and disply the numbers 3, 6, 8 
+1. DateTime
+    * Show today's date and time
+    * Show your birth date
+    * Show what time you get to work
+    * Show hold you are now
