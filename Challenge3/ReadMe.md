@@ -3,10 +3,10 @@ Denver Python Challenge
 
 ## Challenge Three - Gotta Have Class
 ### What is Object Oriented Programming?
-1. A programming paradigm based on a collection of objects that communicate through messaging. An object is a package of related data and methods. Objects are modeled as classes. These models are base on the following principles: encapsulation, inheritance, polymorphism.
-* Encapsulation - Data and behaviors are encapsulted by the model in order to hide the data (data hiding) and expose the behaviors that act upon the data through the messaging interface.
-* Inheritance - The ablitlity to pass data and behavior from a parent on to a decendent. The parent is referred to as the base class and th decendent the derived class.
-* Polymorphism - The ability of a related class to inherit some behaviors while modifying other behaviors based on its context. The base class is a generalization while the derived classes are generally more specific. Consider a shape. Can you draw a shape? A square is a shape, can you draw a square. A circle is a shape. Can you draw a circle?
+* A programming paradigm based on a collection of objects that communicate through messaging. An object is a package of related data and methods. Objects are modeled as classes. These models are base on the following principles: encapsulation, inheritance, polymorphism.
+    - Encapsulation - Data and behaviors are encapsulted by the model in order to hide the data (data hiding) and expose the behaviors that act upon the data through the messaging interface.
+    - Inheritance - The ablitlity to pass data and behavior from a parent on to a decendent. The parent is referred to as the base class and th decendent the derived class.
+    - Polymorphism - The ability of a related class to inherit some behaviors while modifying other behaviors based on its context. The base class is a generalization while the derived classes are generally more specific. Consider a shape. Can you draw a shape? A square is a shape, can you draw a square. A circle is a shape. Can you draw a circle?
 ### Classes
 1. Defining a class
     * Use the class keyword `class MyClass():` 
@@ -206,25 +206,25 @@ Denver Python Challenge
                     return self.Text1
             ```
 ### Inheritance
-    * Inherit from a base class in declaration by adding to params: `class MyDerived(MyBase):`
-    * Access the base class through super()
-    * No constructor needs to be added, the base will be called
-    * Example:
-        ```python
-            class DoctorPerson(Person):
+* Inherit from a base class in declaration by adding to params: `class MyDerived(MyBase):`
+* Access the base class through super()
+* No constructor needs to be added, the base will be called
+* Example:
+    ```python
+        class DoctorPerson(Person):
 
-                def SpecialName():
-                    return "Dr. " + super().FirstName
-        ```
+            def SpecialName():
+                return "Dr. " + super().FirstName
+    ```
 ### Polymorphism
-    * Polymorphism is achieve by overriding in derived class
-    * Example:
-        ```python
-            class DoctorPerson(Person):
+* Polymorphism is achieve by overriding in derived class
+* Example:
+    ```python
+        class DoctorPerson(Person):
 
-                def SaySomething(self):
-                    return "The doctor says..."
-        ```
+            def SaySomething(self):
+                return "The doctor says..."
+    ```
 ## For You To Do
 1. Classes
     * Constructor

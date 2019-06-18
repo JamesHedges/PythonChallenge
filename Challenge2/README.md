@@ -308,10 +308,8 @@ Denver Python Challenge
     * Create an empty list of strings and fill it with 10 strings
     * Create a list of integers using the initialization synta []
     * Create a list using a range of even integers from 50 to 100
-    * Create a function that will print the list with each element on a separate line
 1. Tuples - From the Python command line
     * Create a tuple with a string, an integer, and a float
-    * Create a function that will show them
 1. Sets - From the Python command line
     * Create a set of numbers from 1 to 10
     * Create a set of odd numbers from 5 to 16
@@ -331,6 +329,7 @@ Denver Python Challenge
 1. if, for, while
 1. Try/Except
 1. Functions with parameters and return values
+    * Create a function that will print a list with each element on a separate line
     * Create a function that will divide two numbers
         - Accepts two numbers as parameter, the numerator and denominator
         - Returns the result

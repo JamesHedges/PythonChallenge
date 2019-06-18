@@ -66,3 +66,15 @@ def EnglishSpanishNumerTranslations():
     print(f"three --> {numberTranslations['three']}")
     print(f"six --> {numberTranslations['six']}")
     print(f"eight --> {numberTranslations['eight']}")
+
+def ReturnStringFromCode(code):
+        codeStrings = {"help": "Help Me!", "chill": "What's happening man?", "yves": "Oh My?"}
+        if (codeStrings.__contains__(code)):
+                return codeStrings[code]
+        return "Too bad, Charlie..."
+
+def ShowEveryThirdElement(items):
+        i = 2
+        while i < len(items):
+            print(items[i])
+            i += 3

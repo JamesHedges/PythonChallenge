@@ -6,6 +6,7 @@ import UsingFunctions as uf
 from UsingClasses import Stack, Person, DoctorPerson
 import CollectionsChallenge as cc
 import OtherTypesChallenge as otc
+import datetime
 
 
 def main():
@@ -15,6 +16,16 @@ def main():
       cc.EnglishSpanishNumerTranslations()
       cc.FavoriteFruits()
       otc.ShowSomeDates()
+      dob = datetime.datetime(1963,6,9)
+      print (f"age is {otc.GetAge(dob)}")
+
+      print(f"Divide 5/0: {otc.DivideTest(5, 0)}")
+      print(f"Divide 5/4: {otc.DivideTest(5, 4)}")
+
+      print(f"Lookup yves returns: {cc.ReturnStringFromCode('yves')}")
+
+      items = list(range(1, 25))
+      cc.ShowEveryThirdElement(items)
 
 #     uv.DeclaringVariables()
 #     uv.Comparisons()
