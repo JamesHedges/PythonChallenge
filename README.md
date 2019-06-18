@@ -1,5 +1,5 @@
 # PythonChallenge
-WorldRemit Denver Python Challenge
+Denver Python Challenge
 
 ## Challenge Zero - [Setting Up Your Environment](Challenge0/README.md)
 
@@ -8,5 +8,13 @@ WorldRemit Denver Python Challenge
 ### Variable and Types
 ### Collections
  
-## Challenge Two
+## Challenge Two - [Moving Beyond Basics](Challenge2/READMe.md)
+### More Data Types
+### Iterating
+### Truth Value Testing
+### Flow Control Statements
+### More Functions
+### Classes
+
+
 ## Challenge Three

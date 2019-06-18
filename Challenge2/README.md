@@ -1,5 +1,5 @@
 # PythonChallenge
-WorldRemit Denver Python Challenge
+Denver Python Challenge
 
 ## Challenge Two - Moving Beyond Basics
 ### More Data Types
@@ -180,7 +180,7 @@ WorldRemit Denver Python Challenge
                 if (x is Color.Red):
                     print(f"x has color red: {repr(x)}")
             ```
-## Iterating
+### Iterating
 1. Can iterate over a collection that implements __itr__
 1. Use for each loop `for x in myCollection:`
 1. Example:
@@ -193,7 +193,7 @@ WorldRemit Denver Python Challenge
             print(f"{element} ", end='')
         print("]")
     ```
-## Truth Value Testing
+### Truth Value Testing
 1. Comparison Operators
     * Equal: ==
     * Not Equal: !=
@@ -207,7 +207,7 @@ WorldRemit Denver Python Challenge
     * And - x and y
     * Or - x or y
     * Not - not x
-## Flow Control Statements
+### Flow Control Statements
 1. If Statement
     * Conditional execution when true
     * Syntax: if \<condition\>:
@@ -267,7 +267,7 @@ WorldRemit Denver Python Challenge
         except IndexError as ex:
             print (ex)
         ```
-## More Functions
+### More Functions
 1. Parameters
     * Parameters are inputs to the function
     * Can have zero or more inputs
@@ -303,232 +303,16 @@ WorldRemit Denver Python Challenge
         MyFunc("test name")
         ```
 1. See more on functions: https://www.w3schools.com/python/python_functions.asp
-## Classes
-1. Creating a class
-    * Use the class keyword `class MyClass():` 
-        - don't forget the colon!
-    * Inherit another class by adding to parameters: `class MyClass(myBase):`
-    * Example:
-        ```python
-        class MyClass():
-            pass
-
-        myCls = MyClass()
-        ```
-        - pass indicates there is no implementation
-1. Constructor
-    * Add a constructor with __init__ method
-    * Include the self parameter
-    * Add additional parameters - not required
-    * Fields can be added and initialized
-    * Example:
-    ```python
-    class Person():
-        
-        def __init__(self, fname, lname):
-            self.fname = fname
-            self.lname = lname
-    ```
-1. Methods
-    * First parameter will be self
-    * Example:
-    ```python
-    class Person():
-    
-    def __init__(self, fname, lname):
-        self.fname = fname
-        self.lname = lname
-
-    def FullName(self):
-        return self.fname + " " + self.lname
-
-    def SaySomething(self):
-        return "We need to talk"
-    ```
-
-1. Properties
-    * Use the @property decorator for the get
-    * Use the @<property name>.setter decorator for the set (not required)
-    * Field names can be 'mangled' to make the less accessable by starting with '__'
-    * Example:
-    ```python
-    class Person():
-    
-    def __init__(self, fname, lname):
-        self.__fname = fname
-        self.__lname = lname
-
-    @property
-    def FirstName(self):
-        return self.__fname
-
-    @FirstName.setter
-    def FirstName(self, fname):
-        self.__fname = fname
-
-    @property
-    def FullName(self):
-        return self.__fname + " " + self.__lname
-
-    def SaySomething(self):
-        return "We need to talk"
-    ```
-1. Inheritance
-    * Inherit from a base class in declaration by adding to params: `class MyDerived(MyBase):`
-    * Access the base class through super()
-    * No constructor needs to be added, the base will be called
-    * Example:
-        ```python
-            class DoctorPerson(Person):
-
-                def SpecialName():
-                    return "Dr. " + super().FirstName
-        ```
-1. Polymorphism
-    * Polymorphism is achieve by overriding in derived class
-    * Example:
-        ```python
-            class DoctorPerson(Person):
-
-                def SaySomething(self):
-                    return "The doctor says..."
-        ```
-1. Special Methods
-    * Overloads language operators
-    * Surrounded with double underscore
-    * Most common and recommended is the to string method: `__str__(self)`
-    * Special Methods for comparison
-
-        <table>
-            <tr>
-                <td>__eq__(self, other)</td>
-                <td>Equality</td>
-                <td>self == other</td>
-            </tr>
-            <tr>
-                <td>__ne__(self, other)</td>
-                <td>Not Equal</td>
-                <td>self != other</td>
-            </tr>
-            <tr>
-                <td>__lt__(self, other)</td>
-                <td>Less Than</td>
-                <td>self < other</td>
-            </tr>
-            <tr>
-                <td>__gt__(self, other)</td>
-                <td>Greater Than</td>
-                <td>self > other</td>
-            </tr>
-            <tr>
-                <td>__le__(self, other)</td>
-                <td>Less Than or Equal</td>
-                <td>self <= other</td>
-            </tr>
-            <tr>
-                <td>__ge__(self, other)</td>
-                <td>Greater Than or Equal</td>
-                <td>self >= other</td>
-            </tr>
-        </table>
-
-        - Example:
-            ```python
-            class MyClass():
-                def __init__(self):
-                    self.Text1
-
-                def __eq__(self, other)
-                    return self.Text1 == other
-            ```
-    * Special Method for Math
-
-        <table>
-            <tr>
-                <td>__add__(self, other)</td>
-                <td>Add</td>
-                <td>self + other</td>
-            </tr>
-            <tr>
-                <td>__sub__(self, other)</td>
-                <td>Subtract</td>
-                <td>self - other</td>
-            </tr>
-            <tr>
-                <td>__mul__(self, other)</td>
-                <td>Multiply</td>
-                <td>self * other</td>
-            </tr>
-            <tr>
-                <td>__floordiv__(self, other)</td>
-                <td>Floor Division</td>
-                <td>self // other</td>
-            </tr>
-            <tr>
-                <td>__truediv__(self, other)</td>
-                <td>Division</td>
-                <td>self / other</td>
-            </tr>
-            <tr>
-                <td>__mod__(self, other)</td>
-                <td>Modulus</td>
-                <td>self % other</td>
-            </tr>
-            <tr>
-                <td>__pow__(self, other)</td>
-                <td>Power</td>
-                <td>self ** other</td>
-            </tr>
-        </table>
-
-        - Example (using add to concatination):
-            ```python
-            class MyClass():
-                def __init__(self):
-                    self.Text1
-
-                def __add__(self, other):
-                    return self.Text1 + " " + other
-            ```
-    * Other Common Special Methods
-
-        <table>
-            <tr>
-                <td>__str__(self)</td>
-                <td>To String</td>
-                <td>str(self)</td>
-            </tr>
-            <tr>
-                <td>__repr__(self)</td>
-                <td>Echo Variable</td>
-                <td>repr(self)</td>
-            </tr>
-            <tr>
-                <td>__len__(self)</td>
-                <td>Length</td>
-                <td>len(self)</td>
-            </tr>
-        </table>
-
-        - Example:
-            ```python
-            class MyClass():
-                def __init__(self):
-                    self.Text1
-
-                def __str__(self):
-                    return self.Text1
-            ```
 ## For You To Do
-1. Lists
+1. Lists - From the Python command line
     * Create an empty list of strings and fill it with 10 strings
     * Create a list of integers using the initialization synta []
     * Create a list using a range of even integers from 50 to 100
     * Create a function that will print the list with each element on a separate line
-1. Tuples
+1. Tuples - From the Python command line
     * Create a tuple with a string, an integer, and a float
     * Create a function that will show them
-1. Sets
+1. Sets - From the Python command line
     * Create a set of numbers from 1 to 10
     * Create a set of odd numbers from 5 to 16
     * Get and show the union of the sets
@@ -537,11 +321,20 @@ WorldRemit Denver Python Challenge
     * Create a frozen set of fruit names
     * Create a set of your favorite fruit
     * Are all of you favorites in the forzen set of fruit names?
-1. Dictionary 
+1. Dictionary - From the Python command line
     * Create a dictionary to translate english number one to ten to another language
     * Lookup and disply the numbers 3, 6, 8 
-1. DateTime
+1. DateTime - From the Python command line
     * Show today's date and time
     * Show your birth date
     * Show what time you get to work
-    * Show hold you are now
+1. if, for, while
+1. Try/Except
+1. Functions with parameters and return values
+    * Create a function that will divide two numbers
+        - Accepts two numbers as parameter, the numerator and denominator
+        - Returns the result
+        - Watch out for divide by zero. Should catch the error and display a message
+    * Create a function to return a message based on the value of an code
+    * Create a function that will print evey third element of a list
+    * Create a function that will compute age in years base on a given date

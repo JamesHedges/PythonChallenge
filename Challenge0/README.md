@@ -1,5 +1,5 @@
 # PythonChallenge
-WorldRemit Denver Python Challenge
+Denver Python Challenge
 
 ## Challenge Zero - Setting Up Your Environment
 
