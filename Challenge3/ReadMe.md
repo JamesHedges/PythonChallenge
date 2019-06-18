@@ -231,3 +231,4 @@ Denver Python Challenge
     * Inheritance
     * Polymorphism
     * Special Methods
+    * and more
