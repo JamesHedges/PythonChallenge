@@ -1,7 +1,7 @@
 class MyStack():
 
-    def __init__(self):
-        self.__stackItems = list()
+    def __init__(self, myList=[]):
+        self.__stackItems = list(myList)
 
     def __str__(self):
         return self.__stackItems.__str__()

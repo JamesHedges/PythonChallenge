@@ -225,6 +225,44 @@ Denver Python Challenge
             def SaySomething(self):
                 return "The doctor says..."
     ```
+### Function Argument FYI
+* There are two ways to add more paramaters
+* *args is a list of arguments
+* **kwargs is a dictionary of kew word argument
+* Can be used with named arguments
+* Can be used independently
+* *args and **kwargs are a convention, e.g. `def func(*argument, **keyword):` would work too
+* Example:
+    ```python
+    def FuncWithArgs(message, *args, **kwargs):
+        print(f"message: {message}")
+        for arg in args:
+            print(f"arg: {arg}")
+
+        for key in kwargs:
+            print(f"kwarg[{key}]: {kwargs[key]}")
+    
+    FuncWithArgs("Test 1")
+    FuncWithArgs("Test 2", 'a', 1, 2.22)
+    FuncWithArgs("Test 3", name="test", age='33')
+
+    # Output
+    #
+    #  message: Test 1
+    #  message: Test 2
+    #          arg: a
+    #          arg: 1
+    #          arg: 2.22
+    #  message: Test 3
+    #          kwarg[name]: test
+    #          kwarg[age]: 33
+    #  message: Test 4
+    #          arg: all
+    #          arg: 100
+    #          arg: 99.99
+    #          kwarg[name]: Tester
+    #          kwarg[age]: 33    
+    ```
 ## For You To Do
 1. Classes
     * Constructor

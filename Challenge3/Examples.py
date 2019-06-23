@@ -16,6 +16,17 @@ def DoStackOps():
     print ("\t\tPopped value:", myStack.pop())
     print ("\t\tStack now has:", myStack)
 
+    myStack = MyStack(['a', 'b', 'c', 'd'])
+    print (f"\n\tmyStack using initializer: \n\t\t{myStack}")
+
+def FuncWithArgs(message, *args, **kwargs):
+    print(f"message: {message}")
+    for arg in args:
+        print(f"\targ: {arg}")
+
+    for key in kwargs:
+        print(f"\tkwarg[{key}]: {kwargs[key]}")
+
 def DoPolymorphism():
     print("\n*** Polymorphism")
     myPeople = list()
@@ -40,6 +51,10 @@ def ShowMyPeople(myPeople):
 def Main():
     DoStackOps()
     DoPolymorphism()
+    FuncWithArgs("Test 1")
+    FuncWithArgs("Test 2",'a', 1, 2.22)
+    FuncWithArgs("Test 3", name="test", age='33')
+    FuncWithArgs("Test 4", 'all', 100, 99.99, name="Tester", age='33')
 
 
 Main()
