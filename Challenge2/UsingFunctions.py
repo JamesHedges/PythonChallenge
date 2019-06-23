@@ -9,12 +9,13 @@ def TryIf():
         print(x)
 
 def MyFuncWithParams(name, isUpper = False):
+    #test = str()
     if isUpper:
-        test = name
+        test = name.lower()
     else:
         test = name.upper()
-    if test == 'SHOWIT':
-        print (test)
+    
+    print (f"test: {test}")
 
 
 def MyFuncWithParamsAndReturn(name, isUpper = False):
@@ -22,6 +23,5 @@ def MyFuncWithParamsAndReturn(name, isUpper = False):
         test = name
     else:
         test = name.upper()
-    if test == 'SHOWIT':
-        print (test)
+    print ("test:", test)
     return "DONE"

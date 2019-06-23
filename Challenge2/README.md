@@ -221,6 +221,7 @@ Denver Python Challenge
             x -= 1
         else:
             x = 5
+
         print(x)
         ```
 1. For Statement
@@ -261,11 +262,11 @@ Denver Python Challenge
         ```
     * Example:
         ```python
-        myInts = {1, 2, 3, 4}
+        myInts = [1, 2, 3, 4]
         try:
             myInts[4] = 3
         except IndexError as ex:
-            print (ex)
+            print (f"Error: {ex}")
         ```
 ### More Functions
 1. Parameters
@@ -276,7 +277,7 @@ Denver Python Challenge
         ```python
         def MyFuncWithParams(name, isUpper = False):
             if isUpper:
-                test = name
+                test = name.lower()
             else:
                 test = name.upper()
             if test == 'SHOWIT'
