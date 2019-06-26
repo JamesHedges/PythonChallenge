@@ -265,8 +265,11 @@ Denver Python Challenge
     ```
 ## For You To Do
 1. Classes
-    * Constructor
-    * Inheritance
-    * Polymorphism
-    * Special Methods
-    * and more
+    * Create an Animal class with a method to speak.
+    * Add a constructor that takes a name parameter
+    * Add getter and setter properties for the name
+    * Create a Duck class that inherits the Animal class
+    * Implement the Speak method for the duck. It should quack
+    * Implement the __str__ and __eq__ methods
+    * Create some more animal classes
+    * Build a program that has list of different animals. Iterate the list calling the Speak method on each one.
