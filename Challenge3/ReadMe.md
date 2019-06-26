@@ -273,3 +273,8 @@ Denver Python Challenge
     * Implement the __str__ and __eq__ methods
     * Create some more animal classes
     * Build a program that has list of different animals. Iterate the list calling the Speak method on each one.
+1. Function Args
+    * Implement a function that takes an argument array (*args)
+    * Call the function with the argument array
+    * Implement a function theat takes a key/value argument dictionary (*kwargs)
+    * Call the function with the argument dictionary
